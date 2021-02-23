@@ -61,7 +61,25 @@
 			function bondJSON(data) {
 				// JSON processing data goes here
 				// toConsole(data);
-				$("#output").text(JSON.stringify(data));
+				// $("#output").text(JSON.stringify(data));
+				$.each(data.films, function(i, item){
+					let text = `
+						<div>
+							<b>Title</b>: ${item.Title}
+							<br/>
+							<b>Film Number</b>: ${item.Film}
+							<br/>
+							<b>Year</b>: ${item.Year}
+							<br/>
+							<b>Bond</b>: ${item.Bond}
+							<br/>
+							<b>Box Office</b>: ${item.BoxOffice}
+							<br/>
+							<b>Writers</b>: ${item.Writers}
+
+							<div class = "pic"><img src="thumbnails/a-view-to-a-kill.jpg"/></div>
+						</div>`;
+				});
 			}
 		</script>
 	</head>
@@ -72,7 +90,21 @@
 		<a href="box" class="category">Bond Films By International Box Office Totals</a>
 		<h3 id="filmtitle">Title Will Go Here</h3>
 		<div id="films">
-			<p>Films will go here</p>
+			<div>
+				<b>Title</b>: Title
+				<br/>
+				<b>Film Number</b>: Film
+				<br/>
+				<b>Year</b>: Year
+				<br/>
+				<b>Bond</b>: Bond
+				<br/>
+				<b>Box Office</b>: BoxOffice
+				<br/>
+				<b>Writers</b>: Writers
+
+				<div class = "pic"><img src="thumbnails/a-view-to-a-kill.jpg"/></div>
+			</div>
 		</div>
 		<div id="output">Results go here</div>
 	</body>

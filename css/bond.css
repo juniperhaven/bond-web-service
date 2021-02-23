@@ -1,9 +1,11 @@
 body {font-family:georgia;}
+
 #films {
     max-width:600px;
     margin:5px;
     padding:2px;
 }
+
 #films > div {
     padding:5px;
     min-height:40px;
@@ -23,7 +25,7 @@ body {font-family:georgia;}
     margin:0;
 }
 
-#pic{
+.pic{
     position:absolute;
     right:10px;
     top:10px;
