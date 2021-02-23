@@ -64,21 +64,23 @@
 				// $("#output").text(JSON.stringify(data));
 				$.each(data.films, function(i, item){
 					let text = `
-						<div>
-							<b>Title</b>: ${item.Title}
-							<br/>
-							<b>Film Number</b>: ${item.Film}
-							<br/>
-							<b>Year</b>: ${item.Year}
-							<br/>
-							<b>Bond</b>: ${item.Bond}
-							<br/>
-							<b>Box Office</b>: ${item.BoxOffice}
-							<br/>
-							<b>Writers</b>: ${item.Writers}
+					<div>
+						<b>Title</b>: ${item.Title}
+						<br/>
+						<b>Film Number</b>: ${item.Film}
+						<br/>
+						<b>Year</b>: ${item.Year}
+						<br/>
+						<b>Bond</b>: ${item.Bond}
+						<br/>
+						<b>Box Office</b>: ${item.BoxOffice}
+						<br/>
+						<b>Writers</b>: ${item.Writers}
 
-							<div class = "pic"><img src="thumbnails/a-view-to-a-kill.jpg"/></div>
-						</div>`;
+						<div class = "pic"><img src="thumbnails/a-view-to-a-kill.jpg"/></div>
+					</div>`;
+					
+					$('<div></div>')
 				});
 			}
 		</script>
