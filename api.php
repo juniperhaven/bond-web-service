@@ -1,5 +1,5 @@
 <?php
- /**
+/**
  * api.php is a sample API file to be called via AJAX to 
  * deliver the contents of 2 JSON files, one of which orders the 
  * data by year, the other by Box Office Results.
