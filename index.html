@@ -4,6 +4,7 @@
 		<style>
 			body {font-family:georgia;}
 		</style>
+		<link rel="stylesheet" href="css/bond.css"/>
 		<script src="https://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
 
 		<script type="text/javascript">
@@ -62,6 +63,13 @@
 				// JSON processing data goes here
 				// toConsole(data);
 				// $("#output").text(JSON.stringify(data));
+
+				// clear previous films
+				$("#films").html("");
+
+				// write web service title
+				$("#filmtitle").html(data.title);
+
 				$.each(data.films, function(i, item){
 					let text = `
 					<div>
@@ -77,10 +85,10 @@
 						<br/>
 						<b>Writers</b>: ${item.Writers}
 
-						<div class = "pic"><img src="thumbnails/a-view-to-a-kill.jpg"/></div>
+						<div class = "pic"><img src="thumbnails/${item.Image}"/></div>
 					</div>`;
 					
-					$('<div></div>')
+					$("#films").append(text);
 				});
 			}
 		</script>
@@ -92,22 +100,7 @@
 		<a href="box" class="category">Bond Films By International Box Office Totals</a>
 		<h3 id="filmtitle">Title Will Go Here</h3>
 		<div id="films">
-			<div>
-				<b>Title</b>: Title
-				<br/>
-				<b>Film Number</b>: Film
-				<br/>
-				<b>Year</b>: Year
-				<br/>
-				<b>Bond</b>: Bond
-				<br/>
-				<b>Box Office</b>: BoxOffice
-				<br/>
-				<b>Writers</b>: Writers
-
-				<div class = "pic"><img src="thumbnails/a-view-to-a-kill.jpg"/></div>
-			</div>
+			Results go here
 		</div>
-		<div id="output">Results go here</div>
 	</body>
 </html>
